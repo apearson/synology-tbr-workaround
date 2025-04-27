@@ -1,0 +1,11 @@
+services:
+  rio_handler:
+    build: .
+    image: rio_handler
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    environment:
+      IFACE: ovs_eth2
+      TABLE: 2
